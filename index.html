@@ -10,100 +10,89 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111111;
-            color: #ffffff;
+            background-color: #0f172a;
+            color: #f8fafc;
         }
-        .app-card {
-            transition: transform 0.2s;
-            background-color: #1a1a1a;
-            border: 1px solid #333333;
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
         }
-        .app-card:hover {
+        .card {
+            background-color: #1e293b;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
             transform: translateY(-5px);
-            border-color: #666666;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        .social-link {
-            transition: color 0.2s;
+        .app-store-button {
+            background-color: #3b82f6;
+            transition: background-color 0.2s;
         }
-        .social-link:hover {
-            color: #ffffff;
-        }
-        .section-bg {
-            background-color: #1a1a1a;
-            border: 1px solid #333333;
+        .app-store-button:hover {
+            background-color: #2563eb;
         }
     </style>
 </head>
-<body class="min-h-screen bg-black text-white">
-    <header class="bg-black shadow-sm border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold text-white">App Support</h1>
-            <p class="mt-2 text-lg text-gray-300">Help & Resources</p>
-        </header>
-        <main class="max-w-4xl mx-auto px-4 py-8">
-            <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-                <div class="space-y-4">
-                    <div class="bg-gray-900 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-3">How do I contact support?</h3>
-                        <p class="text-gray-300">Email us at <a href="mailto:rajeshbudhiraja5@gmail.com" class="text-blue-400 hover:underline">rajeshbudhiraja5@gmail.com</a> for any questions or issues.</p>
-                    </div>
-                    <div class="bg-gray-900 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-3">What apps do you develop?</h3>
-                        <p class="text-gray-300">I develop iOS apps focused on productivity, utility, and user experience. Check out my apps on the <a href="https://apps.apple.com/in/developer/rajesh-budhiraja/id1717848628" class="text-blue-400 hover:underline">App Store</a>.</p>
-                    </div>
+<body>
 
-                </div>
-            </section>
-            
-
-        </main>
-        <footer class="bg-gray-900 text-center py-6 mt-8">
-            <p class="text-gray-400">&copy; 2025 Rajesh Budhiraja. All Rights Reserved.</p>
-        </footer>
-                    <i class="fab fa-app-store-ios"></i>
-                    <span class="ml-2">App Store</span>
-                </a>
-            </div>
+    <!-- Header with gradient background -->
+    <header class="gradient-bg py-10 mb-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold text-white mb-2">App Support</h1>
+            <p class="text-xl text-blue-100">Rajesh Budhiraja | iOS Developer</p>
         </div>
     </header>
-
-    <main class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <div class="section-bg rounded-lg shadow-md p-6 mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">About Me</h2>
-            <p class="text-gray-300 mb-4">
-                I'm an experienced iOS Engineer with a passion for creating innovative and user-friendly applications. 
-                I regularly write about iOS development, Swift, and mobile technology on Medium, sharing insights and best practices with the developer community.
-            </p>
-            <p class="text-gray-300">
-                My technical articles cover various topics including UIKit, SwiftUI, Concurrency, and modern iOS development practices. 
-                Check out my Medium blog for in-depth tutorials and development insights.
-            </p>
-        </div>
-
-        <div class="text-center mb-12">
-            <h2 class="text-2xl font-semibold text-white">My iOS Apps</h2>
-            <p class="mt-4 text-gray-300">A collection of innovative iOS applications available on the App Store</p>
-        </div>
-
-        <div id="app-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- Main content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <!-- FAQ section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center text-white">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <!-- FAQ item 1 -->
+                <div class="card p-6 border-l-4 border-blue-500">
+                    <h3 class="text-xl font-bold mb-3 text-blue-300">How do I contact support?</h3>
+                    <p class="text-gray-300">
+                        Email us at <a href="mailto:rajeshbudhiraja5@gmail.com" class="text-blue-400 hover:text-blue-300 underline">rajeshbudhiraja5@gmail.com</a> for any questions or issues with our apps.
+                    </p>
+                </div>
+                
+                <!-- FAQ item 2 -->
+                <div class="card p-6 border-l-4 border-purple-500">
+                    <h3 class="text-xl font-bold mb-3 text-purple-300">What apps do you develop?</h3>
+                    <p class="text-gray-300">
+                        We develop iOS apps focused on productivity, utility, and exceptional user experiences. Check out our applications on the <a href="https://apps.apple.com/in/developer/rajesh-budhiraja/id1717848628" class="text-purple-400 hover:text-purple-300 underline">App Store</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- App Store button -->
+        <div class="text-center">
+            <a href="https://apps.apple.com/in/developer/rajesh-budhiraja/id1717848628" target="_blank" class="app-store-button inline-flex items-center px-8 py-4 rounded-full text-white font-bold text-lg shadow-lg">
+                <i class="fab fa-app-store-ios mr-2"></i>
+                View Apps on App Store
+            </a>
         </div>
     </main>
-
-    <footer class="bg-black border-t border-gray-800 mt-12">
-        <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://rajeshbudhiraja5.medium.com" target="_blank" class="social-link text-gray-400 hover:text-white">
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-8 mb-4">
+                <a href="https://rajeshbudhiraja5.medium.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                     <i class="fab fa-medium fa-lg"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/rajesh-budhiraja-4ab76290/" target="_blank" class="social-link text-gray-400 hover:text-white">
+                <a href="https://www.linkedin.com/in/rajesh-budhiraja-4ab76290/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                     <i class="fab fa-linkedin fa-lg"></i>
                 </a>
-                <a href="https://apps.apple.com/in/developer/rajesh-budhiraja/id1717848628" target="_blank" class="social-link text-gray-400 hover:text-white">
+                <a href="https://apps.apple.com/in/developer/rajesh-budhiraja/id1717848628" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                     <i class="fab fa-app-store-ios fa-lg"></i>
                 </a>
             </div>
-            <p class="text-center text-gray-400">© 2024 Rajesh Budhiraja. All rights reserved.</p>
+            <p class="text-gray-500">&copy; 2025 Rajesh Budhiraja. All Rights Reserved.</p>
         </div>
     </footer>
 
